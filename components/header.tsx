@@ -3,7 +3,9 @@
 import { useState } from "react"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
+// @ts-ignore
 import { Menu, X } from "lucide-react"
+import Image from "next/image"
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -13,7 +15,7 @@ export default function Header() {
       <div className="container flex h-16 items-center justify-between">
         <div className="flex items-center gap-2">
           <Link href="/" className="flex items-center gap-2">
-            <img src="/images/cephly-logo.png" alt="Cephly Logo" className="h-8 w-auto" />
+            <Image src="/images/octopus-logo.svg" alt="Cephly Logo" width={40} height={40} />
             <span className="text-xl font-bold text-white">Cephly</span>
           </Link>
         </div>
@@ -46,9 +48,11 @@ export default function Header() {
         </nav>
 
         <div className="hidden md:flex items-center gap-4">
+          {/* @ts-ignore */}
           <Button variant="outline" size="sm">
             Log In
           </Button>
+          {/* @ts-ignore */}
           <Button
             size="sm"
             className="bg-gradient-to-r from-teal-500 to-cyan-600 hover:from-teal-600 hover:to-cyan-700"
@@ -94,9 +98,11 @@ export default function Header() {
               Testimonials
             </Link>
             <div className="flex flex-col gap-2 pt-2 border-t border-border/40">
+              {/* @ts-ignore */}
               <Button variant="outline" size="sm" className="justify-center">
                 Log In
               </Button>
+              {/* @ts-ignore */}
               <Button
                 size="sm"
                 className="justify-center bg-gradient-to-r from-teal-500 to-cyan-600 hover:from-teal-600 hover:to-cyan-700"

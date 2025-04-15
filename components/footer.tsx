@@ -1,5 +1,7 @@
 import Link from "next/link"
+// @ts-ignore
 import { Github, Twitter, Linkedin } from "lucide-react"
+import Image from "next/image"
 
 export default function Footer() {
   return (
@@ -8,7 +10,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="md:col-span-1">
             <Link href="/" className="flex items-center gap-2 mb-4">
-              <img src="/images/cephly-logo.png" alt="Cephly Logo" className="h-8 w-auto" />
+              <Image src="/images/octopus-logo.svg" alt="Cephly Logo" width={32} height={32} />
               <span className="text-xl font-bold text-white">Cephly</span>
             </Link>
             <p className="text-sm text-muted-foreground mb-4">
